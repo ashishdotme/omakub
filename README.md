@@ -8,7 +8,7 @@ Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
 Install my personal configuration with:
 
-    wget -qO- https://raw.githubusercontent.com/snth/omakub/main/boot.sh | bash
+    wget -qO- https://raw.githubusercontent.com/ashishdotme/omakub/main/boot.sh | bash
 
 ## Contributing to the documentation
 
