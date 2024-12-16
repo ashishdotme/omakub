@@ -8,7 +8,7 @@ Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
 Install my personal configuration with:
 
-    # Install eza, docker-ctop and gum before running below script
+    # Install eza, docker-ctop, uv(cargo install --git https://github.com/astral-sh/uv uv) and gum before running below script
     wget -qO- https://raw.githubusercontent.com/ashishdotme/omakub/main/boot.sh | bash
 
 ## Contributing to the documentation
