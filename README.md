@@ -8,7 +8,7 @@ Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
 Install my personal configuration with:
 
-    # Install eza and gum before running below script
+    # Install eza, docker-ctop and gum before running below script
     wget -qO- https://raw.githubusercontent.com/ashishdotme/omakub/main/boot.sh | bash
 
 ## Contributing to the documentation
