@@ -8,7 +8,29 @@ Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
 Install my personal configuration with:
 
-    # Install eza, docker-ctop, uv(cargo install --git https://github.com/astral-sh/uv uv) and gum before running below script
+    # Install eza
+    sudo mkdir -p /etc/apt/keyrings
+    wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+    sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+    sudo apt update
+    sudo apt install -y eza
+    
+    # Install docker-ctop
+    echo "deb [signed-by=/usr/share/keyrings/azlux-archive-keyring.gpg] http://packages.azlux.fr/debian/ stable main" | sudo tee /etc/apt/sources.list.d/azlux.list
+    sudo wget -O /usr/share/keyrings/azlux-archive-keyring.gpg  https://azlux.fr/repo.gpg
+    sudo apt-get update
+    sudo apt-get install -y docker-ctop
+
+    # Install uv
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+
+    # Install gum
+    sudo mkdir -p /etc/apt/keyrings
+    curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+    sudo apt update && sudo apt install gum
+    
     wget -qO- https://raw.githubusercontent.com/ashishdotme/omakub/main/boot.sh | bash
 
 ## Contributing to the documentation
